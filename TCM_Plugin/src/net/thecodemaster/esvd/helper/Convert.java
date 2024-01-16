@@ -61,21 +61,21 @@ public class Convert {
 	public static String fromPrimitiveNameToWrapperClass(String name) {
 		if (null != name) {
 			// boolean, byte, char, short, int, long, float, and double,
-			if (name.equals("boolean")) {
+			if ("boolean".equals(name)) {
 				return "java.lang.Boolean";
-			} else if (name.equals("byte")) {
+			} else if ("byte".equals(name)) {
 				return "java.lang.Byte";
-			} else if (name.equals("char")) {
+			} else if ("char".equals(name)) {
 				return "java.lang.Character";
-			} else if (name.equals("short")) {
+			} else if ("short".equals(name)) {
 				return "java.lang.Short";
-			} else if (name.equals("int")) {
+			} else if ("int".equals(name)) {
 				return "java.lang.Integer";
-			} else if (name.equals("long")) {
+			} else if ("long".equals(name)) {
 				return "java.lang.Long";
-			} else if (name.equals("float")) {
+			} else if ("float".equals(name)) {
 				return "java.lang.Float";
-			} else if (name.equals("double")) {
+			} else if ("double".equals(name)) {
 				return "java.lang.Double";
 			}
 		}

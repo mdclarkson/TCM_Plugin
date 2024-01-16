@@ -582,37 +582,37 @@ public class BindingResolver {
 	private static boolean isPrimitive(String name) {
 		if (null != name) {
 			// boolean, byte, char, short, int, long, float, and double,
-			if (name.equals("java.lang.Boolean")) {
+			if ("java.lang.Boolean".equals(name)) {
 				return true;
-			} else if (name.equals("java.lang.Byte")) {
+			} else if ("java.lang.Byte".equals(name)) {
 				return true;
-			} else if (name.equals("java.lang.Character")) {
+			} else if ("java.lang.Character".equals(name)) {
 				return true;
-			} else if (name.equals("java.lang.Short")) {
+			} else if ("java.lang.Short".equals(name)) {
 				return true;
-			} else if (name.equals("java.lang.Integer")) {
+			} else if ("java.lang.Integer".equals(name)) {
 				return true;
-			} else if (name.equals("java.lang.Long")) {
+			} else if ("java.lang.Long".equals(name)) {
 				return true;
-			} else if (name.equals("java.lang.Float")) {
+			} else if ("java.lang.Float".equals(name)) {
 				return true;
-			} else if (name.equals("java.lang.Double")) {
+			} else if ("java.lang.Double".equals(name)) {
 				return true;
-			} else if (name.equals("boolean")) {
+			} else if ("boolean".equals(name)) {
 				return true;
-			} else if (name.equals("byte")) {
+			} else if ("byte".equals(name)) {
 				return true;
-			} else if (name.equals("char")) {
+			} else if ("char".equals(name)) {
 				return true;
-			} else if (name.equals("short")) {
+			} else if ("short".equals(name)) {
 				return true;
-			} else if (name.equals("int")) {
+			} else if ("int".equals(name)) {
 				return true;
-			} else if (name.equals("long")) {
+			} else if ("long".equals(name)) {
 				return true;
-			} else if (name.equals("float")) {
+			} else if ("float".equals(name)) {
 				return true;
-			} else if (name.equals("double")) {
+			} else if ("double".equals(name)) {
 				return true;
 			}
 		}
