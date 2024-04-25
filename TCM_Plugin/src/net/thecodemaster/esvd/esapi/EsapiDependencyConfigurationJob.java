@@ -106,7 +106,7 @@ public class EsapiDependencyConfigurationJob extends Job {
 									continue;
 								}
 							}
-						} else if (fileName.equals("log4j.properties")) { // copy the log4j.properties file
+						} else if ("log4j.properties".equals(fileName)) { // copy the log4j.properties file
 							is = new BufferedInputStream(new FileInputStream(target.getAbsolutePath()));
 							IFile destination = fProject.getFile(IPath.SEPARATOR + PROJECT_WEBINF_PATH + IPath.SEPARATOR + fileName);
 
@@ -119,7 +119,7 @@ public class EsapiDependencyConfigurationJob extends Job {
 							}
 						}
 					} else if (target.isDirectory()) {
-						if (fileName.equalsIgnoreCase("esapi") || fileName.equalsIgnoreCase(".esapi")) {
+						if ("esapi".equalsIgnoreCase(fileName) || ".esapi".equalsIgnoreCase(fileName)) {
 							// IFolder destination = fProject.getFolder(fileName); // this one may need modification
 							// added Mar. 2
 							// IFolder tmp = fProject.getFolder(fileName);
