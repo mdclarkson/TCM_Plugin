@@ -1,5 +1,7 @@
 package net.thecodemaster.esvd.ui.preference.page;
 
+import io.github.pixee.security.HostValidator;
+import io.github.pixee.security.Urls;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -156,7 +158,7 @@ public abstract class AbstracPreferencePage extends PreferencePage implements IW
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				try {
-					PlatformUI.getWorkbench().getBrowserSupport().getExternalBrowser().openURL(new URL(URL));
+					PlatformUI.getWorkbench().getBrowserSupport().getExternalBrowser().openURL(Urls.create(URL, Urls.HTTP_PROTOCOLS, HostValidator.DENY_COMMON_INFRASTRUCTURE_TARGETS));
 				} catch (PartInitException | MalformedURLException e1) {
 					PluginLogger.logError(e1);
 				}
