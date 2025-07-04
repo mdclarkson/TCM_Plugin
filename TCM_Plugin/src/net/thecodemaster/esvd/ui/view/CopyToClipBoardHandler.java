@@ -1,5 +1,6 @@
 package net.thecodemaster.esvd.ui.view;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -103,7 +104,7 @@ public class CopyToClipBoardHandler extends Action {
 		BufferedReader bufferedReader = new BufferedReader(new StringReader(allLines));
 		String line;
 		try {
-			while ((line = bufferedReader.readLine()) != null) {
+			while ((line = BoundedLineReader.readLine(bufferedReader, 5_000_000)) != null) {
 				printWriter.println(line);
 			}
 		} catch (IOException e) {
